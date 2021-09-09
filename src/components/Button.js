@@ -1,8 +1,8 @@
 import React from 'react';
 
-function Button({ link, text }) {
+function Button({ link, text, isDisabled }) {
     return (
-        <button href={link}>{text}</button>
+        <button onClick={() => {console.log(text)}} href={link} disabled={isDisabled ?? false}>{text}</button>
     );
 }
 

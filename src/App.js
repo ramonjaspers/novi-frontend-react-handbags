@@ -19,7 +19,7 @@ function App() {
       <nav>
         <Button link='#' text='To the collection' />
         <Button link='#' text='Shop all bags' />
-        <Button link='#' text='Pre-orders' />
+        <Button link='#' text='Pre-orders' isDisabled={true}/>
       </nav>
       <main>
         <Product highlight='Bestseller' image={bag_1} title='The handy bag' price='400,-' />
