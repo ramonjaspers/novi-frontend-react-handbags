@@ -1,4 +1,9 @@
+// Import react module and components
 import React from 'react';
+import Button from './components/Button';
+import Product from './components/Product';
+import Section from './components/Section';
+// Import assets
 import './App.css';
 import bag_1 from './assets/bag_1.png';
 import bag_2 from './assets/bag_2.png';
@@ -31,42 +36,6 @@ function App() {
       </footer>
     </>
   );
-}
-
-function Button({ link, text }) {
-  return (
-    <button href={link}>{text}</button>
-  );
-}
-
-function Product({ highlight, image, title, price }) {
-  return (
-    <article>
-      <span>{highlight}</span>
-      <img src={image} alt={title} />
-      <p>{title}</p>
-      <p>{price}</p>
-    </article>
-  );
-}
-
-function Section({ image, title, paragraphs }) {
-  if (image) {
-    return (
-      <section>
-        <img src={image} alt="Fills some blank space" />
-      </section>
-    );
-  } else {
-    return (
-      <section>
-        <h2>{title}</h2>
-        {paragraphs.map((paragraph) => {
-          return <p>{paragraph}</p>;
-        })}
-      </section>
-    );
-  }
 }
 
 export default App;
